@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import 'antd/dist/antd.css';
 import store from './store/index.js';
-import {getTodoList, getInputChangeAction, getAddItemAction, getDeleteItemAction} from './store/actionCreators.js'
+import { getInitList, initListAction, getInputChangeAction, getAddItemAction, getDeleteItemAction} from './store/actionCreators.js'
 import TodoListUI from './TodoListUI';
+//import axios from 'axios';
 
 // This component focuses on the business logic
 
@@ -31,13 +32,15 @@ class TodoList extends Component {
     }
 
     componentDidMount(){
-        /*axios.get('./list.json').then((res)=>{
-            console.log(res);
-            const data = res.data;
-            const action = initListAction(data);
-            store.dispatch(action);
-        });*/
-        const action = getTodoList();
+        //axios.get('./list.json').then((res)=>{
+          //  const data = res.data;
+           // const action = initListAction(data);
+            // store.dispatch(action);
+        //});
+        //const action = getTodoList();
+        //store.dispatch(action);
+
+        const action = getInitList();
         store.dispatch(action);
     }
 
