@@ -15,3 +15,4 @@ React and Redux environment build, state, event, component, props <br> Virtual D
 * Skip page
 * Performance optimization and Route redirect
 * Asynchronous obtain data
+* AJAX
